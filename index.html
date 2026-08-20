@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anatomia Interativa do Olho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <div id="container-olho">
+      <svg viewBox="0 0 400 300" width="100%">
+        <!-- Esclera -->
+        <path class="parte-olho" id="esclera" fill="#f0f0f0" stroke="#ccc" d="M 50,150 A 130,130 0 1,0 310,150 A 130,130 0 1,0 50,150 Z" data-nome="Esclera" data-desc="A camada protetora externa e branca do olho."/>
+        <!-- Córnea -->
+        <path class="parte-olho" id="cornea" fill="#87CEEB" opacity="0.6" d="M 310,100 A 70,70 0 0,1 310,200 A 130,130 0 0,0 310,100 Z" data-nome="Córnea" data-desc="A camada transparente frontal que refrata a luz para focar as imagens."/>
+        <!-- Íris -->
+        <rect class="parte-olho" id="iris" x="290" y="110" width="10" height="80" fill="#2E8B57" rx="5" data-nome="Íris" data-desc="A parte colorida do olho que controla a quantidade de luz que entra."/>
+        <!-- Pupila -->
+        <rect class="parte-olho" id="pupila" x="292" y="135" width="6" height="30" fill="#000" data-nome="Pupila" data-desc="A abertura central por onde a luz passa para chegar à retina."/>
+        <!-- Cristalino -->
+        <ellipse class="parte-olho" id="cristalino" cx="270" cy="150" rx="8" ry="35" fill="#E0EEEE" stroke="#87CEFA" data-nome="Cristalino" data-desc="Lente natural que ajusta o foco de acordo com a distância do objeto."/>
+        <!-- Retina -->
+        <path class="parte-olho" id="retina" fill="none" stroke="#FF4500" stroke-width="6" d="M 70,150 A 115,115 0 0,0 290,210 M 290,90 A 115,115 0 0,0 70,150" data-nome="Retina" data-desc="Camada fotossensível no fundo do olho que converte luz em sinais elétricos."/>
+        <!-- Nervo Óptico -->
+        <rect class="parte-olho" id="nervo-optico" x="10" y="140" width="50" height="20" fill="#DAA520" data-nome="Nervo Óptico" data-desc="Transmite os impulsos visuais da retina até o cérebro."/>
+      </svg>
+    </div>
+
+    <div id="info-box">
+      <h2 id="titulo">Clique em uma parte do olho</h2>
+      <p id="descricao">Selecione uma estrutura no diagrama para ver os detalhes da anatomia.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
